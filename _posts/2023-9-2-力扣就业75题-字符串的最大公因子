@@ -1,0 +1,66 @@
+1071. 字符串的最大公因子
+
+对于字符串 s 和 t，只有在 s = t + ... + t（t 自身连接 1 次或多次）时，我们才认定 “t 能除尽 s”。
+
+给定两个字符串 str1 和 str2 。返回 最长字符串 x，要求满足 x 能除尽 str1 且 x 能除尽 str2 。
+
+
+示例 1：
+输入：str1 = "ABCABC", str2 = "ABC"
+输出："ABC"
+
+示例 2：
+输入：str1 = "ABABAB", str2 = "ABAB"
+输出："AB"
+
+示例 3：
+输入：str1 = "LEET", str2 = "CODE"
+输出：""
+ 
+提示：
+1 <= str1.length, str2.length <= 1000
+str1 和 str2 由大写英文字母组成
+
+解答：
+class Solution {
+public:
+    string gcdOfStrings(string str1, string str2) {
+        int len1=str1.size(),len2=str2.size();
+        int smaller=len1>len2?len2:len1;
+        string test,pre;
+        for(int i=smaller;i>0;i--){
+            if(len1%i==0&&len2%i==0){
+            /*开始检验*/
+                test="";
+                pre=str1.substr(0,i);
+                for(int k=0;k<len1/i;k++){
+                    test+=pre;
+                }
+
+                if(test==str1){
+                    test="";
+                    for(int p=0;p<len2/i;p++){
+                    test+=pre;
+                    if(test==str2){
+                        return pre;
+                    }
+                }
+            }
+        }
+        }
+        return "";
+    }
+   
+    
+};
+
+官方题解：
+
+
+
+
+
+
+收获：
+1.当发现过程中有重复或者高相似性的任务时，考虑把该过程提炼为一个函数。本题中表现为两次都要判断字串重复x次后是否得到原字符串，可以抽象为函数check(str,str)
+2.C++字符串长度使用string.length()或者string.size()其中length是为了保留C中的特点。
