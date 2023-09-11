@@ -1,4 +1,4 @@
-# About
+# 关于
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
-
+[Github主页](https://github.com/Chenyj5521)
+[qq](1551018530@qq.com)
