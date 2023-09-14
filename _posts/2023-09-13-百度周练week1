@@ -1,0 +1,152 @@
+![第一题](../image/w1_q1.jpg)
+```
+#include<bits/stdc++.h> 
+
+using namespace std;
+
+int gcd(int a,int b){
+    while(b!=0){
+        int temp=b;
+        b=a%b;
+        a=temp;
+    }
+    return a;
+}
+
+int main( )
+{
+    int t,len,gongyueshu;
+    vector<int> data;
+    cin>>t;
+    for(int i=0;i<t;i++){
+        cin>>len;
+
+        int tmp1,tmp2;
+        cin>>tmp1;
+        for(int j=0;j<len-1;j++){
+            cin>>tmp2;
+            int cha=abs(tmp2-tmp1);
+            if(cha>0){
+                data.push_back(cha);
+            }
+            tmp1=tmp2;
+        }
+        int cha_size=data.size();
+        if(cha_size==0){
+            cout<<-1<<endl;
+            continue;
+        }
+////////////////////////////////////////
+        if(cha_size==1){
+            cout<<data[0]<<endl;
+            data.clear();
+            continue;
+        }
+///////////////////////////////////////
+        while(cha_size>2){
+            for(int x=0;x<cha_size/2;x++){
+                gongyueshu=gcd(data[x],data[cha_size-1-x]);
+                data[x]=gongyueshu;
+            }
+            cha_size=cha_size/2+1;
+            data.resize(cha_size);
+        }
+        cout<<gcd(data[0],data[1])<<endl;
+        data.clear();
+    }
+    return 0;
+}
+```
+斜线之间是第一次提交没有考虑到的，导致测试点9/10
+思路：挨个找每两个数的差值，求解所有差值的最大公因数。
+
+关于最大公因数，使用欧几里得算法：
+```
+int gcd(int a,int b){
+    while(b!=0){
+        int temp=b;
+        b=a%b;
+        a=temp;
+    }
+    return a;
+}
+```
+
+![第二题](../image/w1_q2.jpg)
+```
+#include<bits/stdc++.h> 
+
+using namespace std;
+
+int main( )
+{
+    int n,len1,len2,sum_points=0,sum_pin=0;
+    string member1,member2;
+    int member3[1000];
+    cin>>n>>member1>>member2;
+    len1=member1.size();
+    len2=member2.size();
+//gcd
+    int tmp1=len1,tmp2=len2;
+    while(tmp2!=0){
+        int tmp3=tmp2;
+        tmp2=tmp1%tmp2;
+        tmp1=tmp3;
+    }
+    int min_joint_cycle=len1*len2/tmp1;
+
+    for(int i=0;i<min_joint_cycle;i++){
+        int diff=member1[i%len1]-member2[i%len2];
+        if (diff==0){
+            sum_pin++;
+        }
+        else if(diff==-1||diff==-2||diff==3){
+            sum_points++;
+        }
+    }
+    sum_points*=(n/min_joint_cycle);
+    sum_pin*=(n/min_joint_cycle);
+
+    for(int i=0;i<n%min_joint_cycle;i++){
+        int diff=member1[i%len1]-member2[i%len2];
+        if (diff==0){
+            sum_pin++;
+        }
+        else if(diff==-1||diff==-2||diff==3){
+            sum_points++;
+        }
+    }
+
+    cout<<n-sum_points-sum_pin<<" "<<sum_points;
+    
+    return 0;
+}
+```
+优化：石头剪刀布所代表的字母不进行if判断，而是相减判断差值；
+
+![第三题](../image/w1_q3.jpg)
+时间宽松，硬解。
+![第四题](../image/w1_q4.jpg)
+```
+#include<bits/stdc++.h> 
+using namespace std;
+int main( ){
+    long long n,sum=0,divi=2;
+    cin>>n;
+    long long now,pre=n-1;
+    while(pre>50000){
+        now=n/divi;
+        sum+=(pre-now)*(divi-1); 
+        divi++;
+        pre=now;
+    }
+    for(int i=1;i<=pre;i++){
+        sum+=n/i;
+    }
+    cout<<sum+1;
+    return 0;
+}
+```
+
+![第五题](../image/w1_q5.jpg)
+
