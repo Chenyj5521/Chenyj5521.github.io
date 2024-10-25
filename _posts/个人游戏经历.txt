@@ -1,0 +1,65 @@
+各大平台库(Steam/Epic/Origin等)600+游戏，各种游戏类型都有体验,以下是我游戏时长较多游戏的一些信息：
+{
+    "游戏名":"Celeste",
+    "游戏类型":"平台跳跃",
+    "游戏时长":"700h+",
+    "付费额度":"买断",
+    "游戏成就":"官方全成就,社区一些高难度图一命,参与国人自制mod合集制作以及测试"
+}
+
+{
+    "游戏名":"Muse Dash",
+    "游戏类型":"音乐游戏",
+    "游戏时长":"100h",
+    "付费额度":"双端计划通",
+    "游戏成就":"600级"
+}
+
+{
+    "游戏名":"Arcaea",
+    "游戏类型":"音乐游戏",
+    "游戏时长":"1000h+",
+    "付费额度":"4.1前全曲包",
+    "游戏成就":"4.1前达到接近12.5ptt"
+}
+
+{
+    "游戏名":"Crypt of the NecroDancer",
+    "游戏类型":"音乐+rougelike",
+    "游戏时长":"150h",
+    "付费额度":"全dlc",
+    "游戏成就":"第五周每周挑战全球榜一,官方多个0.01%成就"
+}
+
+{
+    "游戏名":"雀魂麻将",
+    "游戏类型":"棋牌/立直麻将",
+    "游戏时长":"1000h+",
+    "付费额度":"150r",
+    "游戏成就":"双账号三四麻雀圣"
+}
+
+{
+    "游戏名":"Battlefield 1/V",
+    "游戏类型":"FPS",
+    "游戏时长":"600h+",
+    "付费额度":"买断",
+    "游戏成就":"半自动4kps"
+}
+
+{
+    "游戏名":"Terraria+tModLoader",
+    "游戏类型":"沙盒/生存",
+    "游戏时长":"800h+",
+    "付费额度":"买断",
+    "游戏成就":"官方全成就+灾厄mod全流程最高难度通关"
+}
+
+{
+    "游戏名":"Hollow Knight",
+    "游戏类型":"类银河战士恶魔城",
+    "游戏时长":"130h",
+    "付费额度":"买断",
+    "游戏成就":"全流程+主线108%成就"
+}
+一些其他游戏:GarrysMod;Minecraft;Control;Elder Ring;Dark Souls 3;Dying Light;Portal;the forest;Raft;NieR Automata;Kingdom;Salt and Sanctuary;The Witcher;stanley parable;Civilization VI;City Skylines;Cyberpunk 2077;Hades;Brotatos;Dead Cells;stardew valley;Undertale;Dont Starve;The Binding of Isaac;Risk of Rain 2;Ori and the Blind Forest;Clash Royale;Phigros;明日方舟;等等
